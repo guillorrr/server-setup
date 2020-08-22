@@ -4,8 +4,8 @@
 # CONFIGURATION
 ######################################################
 
-read -p "Enter Username" NEW_ACCOUNT_USERNAME
-read -p "Enter Password" NEW_ACCOUNT_PASSWORD
+read -p "Enter Username: " NEW_ACCOUNT_USERNAME
+read -sp "Enter Password: " NEW_ACCOUNT_PASSWORD
 
 ######################################################
 # Main Script - Do not modify
