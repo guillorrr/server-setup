@@ -14,7 +14,7 @@ read -sp "Enter Password: " NEW_ACCOUNT_PASSWORD
 # Add alternative user, add user to group "sudo", grant permissions
 ## Note: "useradd" is nearly identical to "adduser" => adduser should be used in cmd line
 ## but is not used in the script
-useradd --create-home --groups sudo "${NEW_ACCOUNT_USERNAME}"
+useradd -m -G sudo -s /bin/bash "${NEW_ACCOUNT_USERNAME}"
 echo "${NEW_ACCOUNT_USERNAME}":"${NEW_ACCOUNT_PASSWORD}" | chpasswd
 
 #If you have a problem with password (sudo), you can reset it in root: pkexec passwd $USER
